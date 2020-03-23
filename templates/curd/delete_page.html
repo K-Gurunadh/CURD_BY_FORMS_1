@@ -1,0 +1,40 @@
+{% extends 'curd/base.html' %}
+
+<html>
+<head>
+{% block title %}
+<title>Delete Form</title>
+{% endblock %}
+{% include 'curd/bootstraplines.html' %}
+</head>
+<body>
+{% block content %}
+<style>
+p{
+background-color: grey;
+color: white;
+text-align: center;
+}
+</style>
+<div class="container">
+<div class="row">
+<div class="offset-md-3 col-md-6">
+<h2 class="text-center">Delete Employee Data...</h2>
+<form method="POST">
+{% csrf_token %}
+{{ dform }}<br>
+<center>
+<input type="submit" value="Delete" class="btn btn-success">
+<input type="reset" value="Clear" class="btn btn-danger"><br><br>
+<a href="{% url '' %}">Goto Home Page</a>
+</center>
+</form>
+{% for i in messages %}
+<p>{{ i }}</p>
+{% endfor %}
+</div>
+</div>
+</div>
+{% endblock %}
+</body>
+</html>

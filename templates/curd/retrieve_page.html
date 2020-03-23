@@ -1,0 +1,48 @@
+{% extends 'curd/base.html' %}
+<html>
+<head>
+{% block title %}
+<title>Retrieve</title>
+{% endblock %}
+</head>
+<body>
+{% block content %}
+{% if data %}
+<h3 id="retrieve_id" class="text-center">Employee Data</h3>
+<table class="table table-bordered text-center table-hover text-white">
+<thead>
+<tr class="bg-dark">
+<th>Employee ID</th>
+<th>First Name</th>
+<th>Last Name</th>
+<th>Email</th>
+<th>Mobile</th>
+<th>Salary</th>
+<th>Location</th>
+<th>Company</th>
+</tr>
+</thead>
+<tbody>
+{% for i in data %}
+<tr>
+<td>{{ i.emp_id }}</td>
+<td>{{ i.first_name }}</td>
+<td>{{ i.last_name }}</td>
+<td>{{ i.email }}</td>
+<td>{{ i.mobile }}</td>
+<td>{{ i.salary }}</td>
+<td>{{ i.location }}</td>
+<td>{{ i.company }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+<center>
+<a href="{% url '' %}">Goto Home Page</a>
+</center>
+{% else %}
+<h2>Data Not Found</h2>
+{% endif %}
+{% endblock %}
+</body>
+</html>

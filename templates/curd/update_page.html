@@ -1,0 +1,29 @@
+
+{% extends 'curd/base.html' %}
+<html>
+<head>
+{% block title %}
+<title>Update Form</title>
+{% endblock %}
+</head>
+<body>
+{% block content %}
+<div class="container">
+<div class="row">
+<div class="offset-md-3 col-md-6">
+<h2 class="text-center">Update Employee Data...</h2>
+<form method="POST">
+{% csrf_token %}
+{{ uform }}<br>
+<center>
+<input type="submit" value="Update" class="btn btn-success">
+<input type="reset" value="Clear" class="btn btn-danger"><br><br>
+<a href="{% url '' %}">Goto Home Page</a>
+</center>
+</form>
+</div>
+</div>
+</div>
+{% endblock %}
+</body>
+</html>

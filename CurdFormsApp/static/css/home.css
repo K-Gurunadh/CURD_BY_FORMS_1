@@ -1,0 +1,32 @@
+.jumbotron{
+background-color:deeppink;
+margin:10px 200px;
+border-radius: 20%;
+}
+a{
+/*margin-left: auto;*/
+border: 1px solid black;
+padding: 10px 20px;
+background-color:white;
+border-radius: 20px;
+box-shadow: 0 0 15px blue, 0 0 25px blueviolet;
+}
+body{
+background-color: lightgreen;
+}
+h1{
+font-size: 100px;
+text-shadow: 0 0 10px red, 0 0 20px yellow;
+}
+#create_h2,#retrieve_id{
+font-size: 50px;
+text-shadow: 0 0 10px red, 0 0 20px yellow;
+}
+label{
+color: blueviolet;
+font-family: "Glyphicons Halflings";
+font-size: 20px;
+}
+input{
+box-shadow: 0 0 5px red;
+}

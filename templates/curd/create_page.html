@@ -1,0 +1,29 @@
+
+{% extends 'curd/base.html' %}
+<html>
+<head>
+{% block title %}
+<title>Create Form</title>
+{% endblock %}
+</head>
+<body>
+{% block content %}
+<div class="container">
+<div class="row">
+<div class="offset-md-2 col-md-8">
+<h2 id="create_h2" class="text-center">Enter Employee Details...</h2>
+<form method="POST">
+{% csrf_token %}
+{{ iform }}<br>
+<center>
+<input type="submit" value="Insert" class="btn btn-success">
+<input type="reset" value="Clear" class="btn btn-danger"><br><br>
+<a href="{% url '' %}">Goto Home Page</a>
+</center>
+</form>
+</div>
+</div>
+</div>
+{% endblock %}
+</body>
+</html>
